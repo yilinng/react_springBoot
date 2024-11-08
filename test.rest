@@ -1,0 +1,60 @@
+POST http://192.168.99.100:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "name": "aaa",
+  "username":"aaaIsUser",
+  "email":"a@a.com",
+  "password":"aaa"
+}
+
+###
+POST http://192.168.99.100:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "usernameOrEmail": "a@a.com",
+  "password":"aaa"
+}
+
+###
+GET http://192.168.99.100:8080/api/auth/user
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhQGEuY29tIiwiaWF0IjoxNzMwOTcwMTE4LCJleHAiOjE3MzE1NzQ5MTh9.HjH-b3h4hDheRiY7HgeKxFGS4PiN4puENiDYMLYQwaBcxLpAOZ085u-aQSrgqr6v
+
+###
+GET http://192.168.99.100:8080/api/auth/email
+
+###
+POST http://192.168.99.100:8080/api/auth/logout
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhQGEuY29tIiwiaWF0IjoxNzMwNDMzMDQwLCJleHAiOjE3MzEwMzc4NDB9.gtHlEPdY86DNhnh1yOcpdtP02yFzYI0rcA1sxA5VGu57tOEj44l0lJ6j9ifRkMrZ
+
+{
+  "token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhQGEuY29tIiwiaWF0IjoxNzMwNDMzMDQwLCJleHAiOjE3MzEwMzc4NDB9.gtHlEPdY86DNhnh1yOcpdtP02yFzYI0rcA1sxA5VGu57tOEj44l0lJ6j9ifRkMrZ"
+}
+###
+GET http://192.168.99.100:8080/api/todos
+
+###
+POST http://192.168.99.100:8080/api/todos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhQGEuY29tIiwiaWF0IjoxNzMwOTcwMTE4LCJleHAiOjE3MzE1NzQ5MTh9.HjH-b3h4hDheRiY7HgeKxFGS4PiN4puENiDYMLYQwaBcxLpAOZ085u-aQSrgqr6v
+
+{
+  "title": "test Add maven dependencies",
+  "content":"test Here is a complete pom.xml file for your reference:"
+}
+
+###
+PATCH http://192.168.99.100:8080/api/todos/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhbm5AdGVzdC5jb20iLCJpYXQiOjE3MzA4NzU1NTcsImV4cCI6MTczMTQ4MDM1N30.SDyGcUFqEMMY7jeINkdRmG7xcNfMdYM088H6fWqboSeKi_iI0OdL3bobn_120Djn
+
+{
+  "title": "Add maven dependencies",
+  "content":"Here is a complete pom.xml file for your reference:"
+}
+
+###
+DELETE http://192.168.99.100:8080/api/todos/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhbm5AdGVzdC5jb20iLCJpYXQiOjE3MzA4NzU1NTcsImV4cCI6MTczMTQ4MDM1N30.SDyGcUFqEMMY7jeINkdRmG7xcNfMdYM088H6fWqboSeKi_iI0OdL3bobn_120Djn

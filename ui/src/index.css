@@ -1,0 +1,80 @@
+.entry {
+  border: 1px solid #eee;
+  padding: 5px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.date_icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.date_icon p{
+ margin-right: 10px;
+}
+
+.date_icon svg{
+  margin-right: 10px;
+ }
+
+ .addEntryBtn {
+  margin-bottom: 20px;
+ }
+
+ .addEntry {
+  border: 1px dashed ;
+  padding: 30px 10px 50px 10px;
+  border-radius: 20px;
+  margin: 10px;
+ }
+
+ .addEntry_title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+ }
+
+ .addEntry_title h2{
+  margin-right: 50px;
+  margin-bottom: 10px;
+ }
+
+ .entry_form div {
+  margin-bottom: 10px;
+ }
+
+ .entry_form div {
+  margin-bottom: 10px;
+ }
+
+ .diagnosisList{
+  margin: 20px 0px 10px 0px;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  padding: 10px;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+ }
+
+ .diagnosisList .codeBtn {
+  margin-left: 10px;
+ }
+
+ .selectHealthCheck {
+  width: 200px;
+  height: 50px;
+  font-family: Arial;
+  margin: 10px 0px;
+ }
+
+
+ @media screen and (max-width: 600px) {
+  .addEntry {
+    margin: 40px auto 20px auto;
+    padding: 40px 10px 50px 10px;
+    border-radius: 10px;
+  }
+}

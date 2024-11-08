@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  java_app:
+    container_name: java_app
+    image: java_app:1.0.0
+    build: ./todo
+    ports:
+      - 8080:8080
+    environment:
+      - DATABASE_URL=jdbc:postgresql://java_db:5432/postgres
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=postgres
+      - app_jwt_secret_access=daf66e01593f61a15b857cf433aae03a005812b31234e149036bcc8dee755dbb
+      - app_jwt_secret_refresh=isrefreshsfghhjkkllmkbvderyilaqcnjhjkkaxghjkszymmndewrtuyk12346
+      - app_jwt_expiration_milliseconds=604800000
+    depends_on:
+      - java_db
+
+  java_db:
+    container_name: java_db
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata: {}
